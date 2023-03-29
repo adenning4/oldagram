@@ -29,17 +29,12 @@ const posts = [
   },
 ];
 
-//grab the DOM elements and assign to variables
-const posterNameEl = document.getElementById("poster-name");
-const posterUsernameEl = document.getElementById("poster-username");
-const posterLocationEl = document.getElementById("poster-location");
-const posterAvatarEl = document.getElementById("poster-avatar");
-const posterImageEl = document.getElementById("poster-image");
-const posterCommentEl = document.getElementById("poster-comment");
+//grab the post likes element
 const postLikesEl = document.getElementById("post-likes");
 
 //grab the element where the html will be written to
 const postsEl = document.getElementById("posts");
+
 // console.log(postsEl.innerHTML);
 //iterate through the posts array, and write the values to the posts object
 let generatedHtml = "";
@@ -66,7 +61,7 @@ for (let i = 0; i < posts.length; i++) {
         <img class="icon" src="./images/icon-heart.png" alt="heart icon" />
         <img class="icon" src="./images/icon-comment.png" alt="comment icon" />
         <img class="icon" src="./images/icon-dm.png" alt="message icon" />
-        <p class="poster-message-section-text" id="post-likes">${posts[i].likes}</p>
+        <p class="poster-message-section-text" id="post-likes">${posts[i].likes} likes</p>
         <p class="poster-message-section-text" id="poster-message">
           <span id="poster-username">${posts[i].username}</span>
           <span id="poster-comment">${posts[i].comment}</span>
