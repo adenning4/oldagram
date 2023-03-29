@@ -40,31 +40,31 @@ const postsEl = document.getElementById("posts");
 let generatedHtml = "";
 for (let i = 0; i < posts.length; i++) {
   generatedHtml += `
-    <section id="poster-info-section">
+    <section class="poster-info-section">
         <img
-          id="poster-avatar"
+          class="poster-avatar"
           src="${posts[i].avatar}"
           alt=""
         />
         <p id="poster-name">
-          ${posts[i].name} <span id="poster-location">${posts[i].location}</span>
+          ${posts[i].name} <span class="poster-location">${posts[i].location}</span>
         </p>
       </section>
-      <section id="img-section">
+      <section class="img-section">
         <img
-          id="poster-image"
+          class="poster-image"
           src="${posts[i].post}"
           alt=""
         />
       </section>
-      <section id="poster-message-section">
+      <section class="poster-message-section">
         <img class="icon" src="./images/icon-heart.png" alt="heart icon" />
         <img class="icon" src="./images/icon-comment.png" alt="comment icon" />
         <img class="icon" src="./images/icon-dm.png" alt="message icon" />
-        <p class="poster-message-section-text" id="post-likes">${posts[i].likes} likes</p>
-        <p class="poster-message-section-text" id="poster-message">
-          <span id="poster-username">${posts[i].username}</span>
-          <span id="poster-comment">${posts[i].comment}</span>
+        <p class="poster-message-section-text post-likes">${posts[i].likes} likes</p>
+        <p class="poster-message-section-text>
+          <span class="poster-username">${posts[i].username}</span>
+          <span class="poster-comment">${posts[i].comment}</span>
         </p>
       </section>`;
 }
