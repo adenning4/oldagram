@@ -1,12 +1,12 @@
 const posts = [
   {
-    name: "Vincent van Gogh",
-    username: "vincey1853",
-    location: "Zundert, Netherlands",
-    avatar: "images/avatar-vangogh.jpg",
-    post: "images/post-vangogh.jpg",
-    comment: "just took a few mushrooms lol",
-    likes: 21,
+    name: "Vincent van Gogh", // id 'poster-name'
+    username: "vincey1853", // id 'poster-username'
+    location: "Zundert, Netherlands", // id 'poster-location'
+    avatar: "images/avatar-vangogh.jpg", // id 'poster-avatar'
+    post: "images/post-vangogh.jpg", // id 'poster-image'
+    comment: "just took a few mushrooms lol", // id 'poster-comment'
+    likes: 21, // id 'post-likes'
   },
   {
     name: "Gustave Courbet",
@@ -28,3 +28,52 @@ const posts = [
     likes: 152,
   },
 ];
+
+//grab the DOM elements and assign to variables
+const posterNameEl = document.getElementById("poster-name");
+const posterUsernameEl = document.getElementById("poster-username");
+const posterLocationEl = document.getElementById("poster-location");
+const posterAvatarEl = document.getElementById("poster-avatar");
+const posterImageEl = document.getElementById("poster-image");
+const posterCommentEl = document.getElementById("poster-comment");
+const postLikesEl = document.getElementById("post-likes");
+
+//grab the element where the html will be written to
+const postsEl = document.getElementById("posts");
+// console.log(postsEl.innerHTML);
+//iterate through the posts array, and write the values to the posts object
+let generatedHtml = "";
+for (let i = 0; i < posts.length; i++) {
+  generatedHtml += `
+    <section id="poster-info-section">
+        <img
+          id="poster-avatar"
+          src="${posts[i].avatar}"
+          alt=""
+        />
+        <p id="poster-name">
+          ${posts[i].name} <span id="poster-location">${posts[i].location}</span>
+        </p>
+      </section>
+      <section id="img-section">
+        <img
+          id="poster-image"
+          src="${posts[i].post}"
+          alt=""
+        />
+      </section>
+      <section id="poster-message-section">
+        <img class="icon" src="./images/icon-heart.png" alt="heart icon" />
+        <img class="icon" src="./images/icon-comment.png" alt="comment icon" />
+        <img class="icon" src="./images/icon-dm.png" alt="message icon" />
+        <p class="poster-message-section-text" id="post-likes">${posts[i].likes}</p>
+        <p class="poster-message-section-text" id="poster-message">
+          <span id="poster-username">${posts[i].username}</span>
+          <span id="poster-comment">${posts[i].comment}</span>
+        </p>
+      </section>`;
+}
+
+//push the generated html to the #posts div
+// console.log(generatedHtml);
+postsEl.innerHTML = generatedHtml;
