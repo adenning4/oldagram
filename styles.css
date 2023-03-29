@@ -1,5 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   font-size: 13px;
+  padding: 10px;
+  /*  */
+  background: #f5f5f5;
+}
+
+header,
+section {
+  width: 375px;
+  margin: 0 auto;
+  background: #ffffff;
+  /*  */
+  /* border: 1px dotted red; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c6c6c6;
+  padding: 10px 15px;
+  /*  */
+  /* border: 1px dotted red; */
+}
+
+#oldagram-logo {
+  width: 127px;
+}
+
+#user-avatar {
+  height: 34px;
+  border-radius: 50%;
+}
+
+#poster-info-section {
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  /*  */
+  /* border: 1px dotted red; */
+}
+
+#poster-avatar {
+  height: 34px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+#poster-location {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#poster-image {
+  width: 100%;
+  /*  */
+  /* border: 1px dotted red; */
+}
+
+#poster-message-section {
+  padding: 5px 10px 10px;
+  /*  */
+  /* border: 1px dotted red; */
+}
+
+.icon {
+  width: 25px;
+  margin: 0 10px 5px 0;
+  /*  */
+  /* border: 1px dotted red; */
+}
+
+#post-likes {
+  margin-bottom: 12px;
+}
+
+#poster-message {
+  font-weight: 400;
+}
+
+#poster-username {
+  font-weight: 700;
 }
