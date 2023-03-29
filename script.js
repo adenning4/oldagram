@@ -88,7 +88,7 @@ for (let i = 0; i < posts.length; i++) {
 
   //push the event listener from the previously created element into the event listener array, use the index to access the associated likes number in the posts array and iterate by one, then modify the likes text content with the updated likes number || see pushLike function below
   heartIconEventListeners.push(
-    heartIconEls[i].addEventListener("dblclick", function () {
+    heartIconEls[i].addEventListener("click", function () {
       pushLike(i);
     })
   );
