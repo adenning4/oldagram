@@ -27,7 +27,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #c6c6c6;
-  padding: 10px 15px;
+  padding: 0px 15px 5px;
   /*  */
   /* border: 1px dotted red; */
 }
@@ -68,7 +68,7 @@ header {
 }
 
 #poster-message-section {
-  padding: 5px 10px 10px;
+  padding: 5px 10px 15px;
   /*  */
   /* border: 1px dotted red; */
 }
