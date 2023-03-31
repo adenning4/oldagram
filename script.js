@@ -59,8 +59,8 @@ for (let i = 0; i < posts.length; i++) {
         <img class="icon" id='heart-icon${i}' src="./images/icon-heart.png" alt="heart icon" />
         <img class="icon" src="./images/icon-comment.png" alt="comment icon" />
         <img class="icon" src="./images/icon-dm.png" alt="message icon" />
-        <p id='likes${i}'class="poster-message-section-text post-likes">${posts[i].likes} likes</p>
-        <p class="poster-message-section-text>
+        <p id='likes${i}'class="post-likes">${posts[i].likes} likes</p>
+        <p>
           <span class="poster-username">${posts[i].username}</span>
           <span class="poster-comment">${posts[i].comment}</span>
         </p>
