@@ -75,9 +75,7 @@ postsEl.innerHTML = generatedHtml;
 //create arrays for the unique images, hearts, and like counts
 //ditto for their event listeners
 const heartIconEls = [];
-const heartIconEventListeners = [];
 const imageIdEls = [];
-const imageEventListeners = [];
 const likesArr = [];
 
 for (let i = 0; i < posts.length; i++) {
@@ -86,19 +84,15 @@ for (let i = 0; i < posts.length; i++) {
   imageIdEls.push(document.getElementById(`poster-image${i}`));
   likesArr.push(document.getElementById(`likes${i}`));
 
-  //push the event listener from the previously created element into the event listener array, use the index to access the associated likes number in the posts array and iterate by one, then modify the likes text content with the updated likes number || see pushLike function below
-  heartIconEventListeners.push(
-    heartIconEls[i].addEventListener("click", function () {
-      pushLike(i);
-    })
-  );
+  //add the event listener to the previously created element, use the index to access the associated likes number in the posts array and iterate by one, then modify the likes text content with the updated likes number || see pushLike function below
+  heartIconEls[i].addEventListener("click", function () {
+    pushLike(i);
+  });
 
   //same method as the heart icon but with the image
-  imageEventListeners.push(
-    imageIdEls[i].addEventListener("dblclick", function () {
-      pushLike(i);
-    })
-  );
+  imageIdEls[i].addEventListener("dblclick", function () {
+    pushLike(i);
+  });
 }
 
 //create a function to use the dry principle in the above for loop
